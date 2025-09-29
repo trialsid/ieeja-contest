@@ -3,123 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ieeja Singing Contest</title>
+  <title>Ieeja Voices Singing Contest 2024</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body id="top">
   <header class="hero">
-    <div class="hero__content">
-      <p class="hero__eyebrow">Ieeja Cultural Collective Presents</p>
-      <h1 class="hero__title">Ieeja Voices Singing Contest 2024</h1>
-      <p class="hero__tagline">Share your passion, celebrate our hometown, and win cash prizes!</p>
-      <a class="hero__cta" href="#register">Register Now</a>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <p class="eyebrow">Ieeja Cultural Collective Presents</p>
+      <h1>Ieeja Voices Singing Contest</h1>
+      <p class="lead">
+        Bring your song to the stage, share hometown pride, and shine before friends, family, and
+        fellow artists.
+      </p>
+      <div class="hero__actions">
+        <a class="button" href="https://forms.gle/ieejavoices" target="_blank" rel="noopener">Register Now</a>
+        <a class="button button--ghost" href="#details">Discover More</a>
+      </div>
+      <dl class="hero__meta">
+        <div>
+          <dt>Submission Deadline</dt>
+          <dd>20 May 2024</dd>
+        </div>
+        <div>
+          <dt>Live Showcase</dt>
+          <dd>2 June · Ieeja Town Hall</dd>
+        </div>
+        <div>
+          <dt>Prize Pool</dt>
+          <dd>₹50,000 in awards</dd>
+        </div>
+      </dl>
     </div>
-    <div class="hero__background" aria-hidden="true"></div>
   </header>
 
   <main>
-    <section class="section" id="about">
-      <h2>About the Contest</h2>
-      <p>
-        The Ieeja Voices Singing Contest brings together vocalists from our community to celebrate
-        local talent. Record your best performance, send it to us, and inspire the whole town.
-      </p>
-      <div class="highlights">
-        <article>
-          <h3>Who Can Join?</h3>
-          <p>Anyone with a connection to Ieeja who loves to sing—soloists, duos, and groups are welcome.</p>
-        </article>
-        <article>
-          <h3>Submission Format</h3>
-          <p>Share a high-quality audio or video recording up to 4 minutes long showcasing your vocal skills.</p>
-        </article>
-        <article>
-          <h3>Important Dates</h3>
-          <ul>
-            <li><strong>Registration Opens:</strong> April 15</li>
-            <li><strong>Submission Deadline:</strong> May 20</li>
-            <li><strong>Live Showcase:</strong> June 2 at Ieeja Town Hall</li>
-          </ul>
-        </article>
+    <section class="section" id="details">
+      <div class="container">
+        <h2>Simple Steps to Share Your Voice</h2>
+        <p class="section__intro">
+          The contest is open to soloists, duos, and groups who feel connected to Ieeja. Follow the
+          three easy steps below and we&rsquo;ll see you in the spotlight.
+        </p>
+        <div class="card-grid">
+          <article class="card">
+            <h3>1. Join the Lineup</h3>
+            <p>Complete the online form with your contact information, song choice, and a short bio.</p>
+          </article>
+          <article class="card">
+            <h3>2. Record Your Performance</h3>
+            <p>Submit a clear audio or video track (MP3, WAV, or MP4) between two and four minutes long.</p>
+          </article>
+          <article class="card">
+            <h3>3. Send &amp; Confirm</h3>
+            <p>Email your file and proof of registration to <a href="mailto:sing@ieeja.org">sing@ieeja.org</a>. Expect a confirmation within 48 hours.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section section--accent" id="prizes">
-      <div class="section__header">
-        <h2>Prize Pool</h2>
-        <p>We are thrilled to support our artists with meaningful awards.</p>
-      </div>
-      <div class="prize-grid">
-        <article class="prize-card">
-          <h3>Grand Prize</h3>
-          <p class="prize-card__amount">₹25,000</p>
-          <p>Top vocalist selected by our panel of judges.</p>
-        </article>
-        <article class="prize-card">
-          <h3>Runner-Up</h3>
-          <p class="prize-card__amount">₹15,000</p>
-          <p>Rewarding extraordinary performances that move the crowd.</p>
-        </article>
-        <article class="prize-card">
-          <h3>Audience Choice</h3>
-          <p class="prize-card__amount">₹10,000</p>
-          <p>Chosen by the community during the live showcase event.</p>
-        </article>
+      <div class="container">
+        <div class="section__header">
+          <h2>Prizes &amp; Recognition</h2>
+          <p>We celebrate artistry that moves hearts and spotlights new voices.</p>
+        </div>
+        <div class="card-grid card-grid--prizes">
+          <article class="card card--prize">
+            <h3>Grand Prize</h3>
+            <p class="card__value">₹25,000</p>
+            <p>Best overall performance, selected by our judging panel.</p>
+          </article>
+          <article class="card card--prize">
+            <h3>Runner-Up</h3>
+            <p class="card__value">₹15,000</p>
+            <p>Honouring exceptional vocals and stage presence.</p>
+          </article>
+          <article class="card card--prize">
+            <h3>Audience Choice</h3>
+            <p class="card__value">₹10,000</p>
+            <p>Chosen live by the community during the showcase.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="register">
-      <h2>How to Register</h2>
-      <ol class="steps">
-        <li>
-          <h3>Complete the Form</h3>
-          <p>Fill out the online registration form with your contact details and song selection.</p>
-        </li>
-        <li>
-          <h3>Prepare Your Recording</h3>
-          <p>Record a clear performance video or audio clip (MP4, MP3, or WAV) lasting between 2 and 4 minutes.</p>
-        </li>
-        <li>
-          <h3>Submit &amp; Confirm</h3>
-          <p>Email your recording and proof of registration to <a href="mailto:sing@ieeja.org">sing@ieeja.org</a>. We will send a confirmation within 48 hours.</p>
-        </li>
-      </ol>
-      <a class="button" href="https://forms.gle/ieejavoices" target="_blank" rel="noopener">Go to Registration Form</a>
+    <section class="section" id="timeline">
+      <div class="container timeline">
+        <div class="timeline__dates">
+          <h2>Key Dates</h2>
+          <ul>
+            <li><strong>15 April</strong> &mdash; Registration opens</li>
+            <li><strong>20 May</strong> &mdash; Final day to submit recordings</li>
+            <li><strong>2 June</strong> &mdash; Live showcase and prize night</li>
+          </ul>
+        </div>
+        <div class="timeline__criteria">
+          <h2>Judging Focus</h2>
+          <ul>
+            <li>Vocal quality: pitch, tone, and clarity</li>
+            <li>Expression: storytelling, emotion, audience connection</li>
+            <li>Creativity: arrangement, originality, song choice</li>
+            <li>Technique: breath control, dynamics, musicality</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section class="section section--muted" id="judging">
-      <h2>Judging Criteria</h2>
-      <div class="criteria-grid">
-        <article>
-          <h3>Vocal Quality</h3>
-          <p>Pitch accuracy, tone, and control across your performance.</p>
-        </article>
-        <article>
-          <h3>Expression</h3>
-          <p>Emotion, storytelling, and connection with your audience.</p>
-        </article>
-        <article>
-          <h3>Creativity</h3>
-          <p>Song choice, arrangement, and originality in delivery.</p>
-        </article>
-        <article>
-          <h3>Technical Skill</h3>
-          <p>Breath control, dynamics, and overall musicality.</p>
-        </article>
+    <section class="section section--muted" id="contact">
+      <div class="container">
+        <h2>Need a Hand?</h2>
+        <p class="section__intro">
+          Reach out to the organising team at <a href="mailto:sing@ieeja.org">sing@ieeja.org</a> or call +91 98765 43210 for help with
+          registrations or submissions.
+        </p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div>
-      <h2>Need Help?</h2>
-      <p>Contact the organizing team at <a href="mailto:sing@ieeja.org">sing@ieeja.org</a> or call +91 98765 43210.</p>
-    </div>
-    <div class="footer__meta">
+    <div class="container footer__inner">
       <p>&copy; 2024 Ieeja Cultural Collective. All rights reserved.</p>
+      <a href="#top" class="footer__top">Back to top</a>
     </div>
   </footer>
 </body>
