@@ -41,7 +41,7 @@ body {
 .theme-toggle {
   position: absolute;
   top: clamp(1rem, 4vw, 2rem);
-  right: clamp(1rem, 4vw, 2rem);
+  right: clamp(9rem, 12vw, 12rem);
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
@@ -54,6 +54,7 @@ body {
   cursor: pointer;
   backdrop-filter: blur(12px);
   transition: transform 0.25s ease, background 0.25s ease;
+  z-index: 10;
 }
 
 .theme-toggle:hover,
@@ -94,8 +95,8 @@ body {
 
 .lang-toggle {
   position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: clamp(1rem, 4vw, 2rem);
+  right: clamp(1rem, 4vw, 2rem);
   z-index: 1000;
   background: rgba(255, 255, 255, 0.95);
   border: 2px solid rgba(117, 98, 255, 0.2);
@@ -109,6 +110,16 @@ body {
   box-shadow: 0 8px 24px rgba(31, 22, 61, 0.15);
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+}
+
+[data-theme='dark'] .lang-toggle {
+  background: rgba(33, 24, 50, 0.9);
+  color: var(--color-text);
+  border-color: rgba(255, 139, 186, 0.3);
+}
+
+[data-theme='dark'] .lang-toggle:hover {
+  border-color: rgba(255, 139, 186, 0.5);
 }
 
 .lang-toggle:hover {
@@ -511,6 +522,16 @@ main {
     right: 1rem;
     padding: 0.5rem 1.2rem;
     font-size: 0.85rem;
+  }
+
+  .theme-toggle {
+    right: 7rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .theme-toggle__label {
+    display: none;
   }
 }
 
