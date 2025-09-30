@@ -12,7 +12,7 @@
 <body id="top" data-theme="light">
   <header class="hero">
     <div class="hero__overlay" aria-hidden="true"></div>
-    <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
       <span class="theme-toggle__icon" aria-hidden="true"></span>
       <span class="theme-toggle__label">Dark mode</span>
     </button>
@@ -140,12 +140,20 @@
       const classNameDark = 'dark';
       const themeToggle = document.querySelector('.theme-toggle');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+      const toggleLabel = themeToggle?.querySelector('.theme-toggle__label');
 
       const getStoredTheme = () => localStorage.getItem(storageKey);
       const setTheme = (theme) => {
         document.body.setAttribute('data-theme', theme);
         localStorage.setItem(storageKey, theme);
-        themeToggle?.setAttribute('aria-pressed', theme === classNameDark ? 'true' : 'false');
+        const isDark = theme === classNameDark;
+        themeToggle?.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        if (themeToggle) {
+          themeToggle.setAttribute('aria-label', isDark ? 'Toggle light mode' : 'Toggle dark mode');
+        }
+        if (toggleLabel) {
+          toggleLabel.textContent = isDark ? 'Light mode' : 'Dark mode';
+        }
       };
 
       const initTheme = () => {
