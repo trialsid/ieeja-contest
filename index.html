@@ -9,9 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body id="top">
+<body id="top" data-theme="light">
   <header class="hero">
     <div class="hero__overlay" aria-hidden="true"></div>
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+      <span class="theme-toggle__icon" aria-hidden="true"></span>
+      <span class="theme-toggle__label">Dark mode</span>
+    </button>
     <div class="container hero__content">
       <p class="eyebrow">Ieeja Cultural Collective Presents</p>
       <h1>Ieeja Voices Singing Contest</h1>
@@ -130,5 +134,43 @@
       <a href="#top" class="footer__top">Back to top</a>
     </div>
   </footer>
+  <script>
+    (function () {
+      const storageKey = 'ieeja-theme';
+      const classNameDark = 'dark';
+      const themeToggle = document.querySelector('.theme-toggle');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+      const getStoredTheme = () => localStorage.getItem(storageKey);
+      const setTheme = (theme) => {
+        document.body.setAttribute('data-theme', theme);
+        localStorage.setItem(storageKey, theme);
+        themeToggle?.setAttribute('aria-pressed', theme === classNameDark ? 'true' : 'false');
+      };
+
+      const initTheme = () => {
+        const storedTheme = getStoredTheme();
+        if (storedTheme === classNameDark || storedTheme === 'light') {
+          setTheme(storedTheme);
+        } else {
+          setTheme(prefersDark.matches ? classNameDark : 'light');
+        }
+      };
+
+      themeToggle?.addEventListener('click', () => {
+        const current = document.body.getAttribute('data-theme');
+        setTheme(current === classNameDark ? 'light' : classNameDark);
+      });
+
+      prefersDark.addEventListener('change', (event) => {
+        const storedTheme = getStoredTheme();
+        if (!storedTheme) {
+          setTheme(event.matches ? classNameDark : 'light');
+        }
+      });
+
+      initTheme();
+    })();
+  </script>
 </body>
 </html>
